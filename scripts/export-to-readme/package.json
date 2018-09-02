@@ -1,0 +1,16 @@
+{
+  "name": "export-to-readme",
+  "version": "1.0.0",
+  "description": "A script that will read a json of post mand and export to readme file with endpoints",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "keywords": [],
+  "author": "Nguyen Quang Chien <chienglory@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.10"
+  }
+}

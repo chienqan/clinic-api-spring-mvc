@@ -1,0 +1,890 @@
+{
+	"info": {
+		"_postman_id": "500e0868-0727-408c-a1ec-5f766c85d713",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Addresses",
+			"item": [
+				{
+					"name": "addresses/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/addresses/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addresses",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\": 1,\"streetAddress\": \"1993 Preston Street\",\"city\": \"Caney\",\"state\": \"KS\",\"postalCode\": \"67343\"}"
+						},
+						"url": {
+							"raw": "{{url}}/addresses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addresses",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"streetAddress\": \"3632 Preston Street\",\"city\": \"Caney\",\"state\": \"KS\",\"postalCode\": \"67333\"}"
+						},
+						"url": {
+							"raw": "{{url}}/addresses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addresses/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/addresses/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addresses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/addresses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Diseases",
+			"item": [
+				{
+					"name": "diseases/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/diseases/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"diseases",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "diseases",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\": 1,    \"icd\": {    \"diseaseCode\": \"A00.9\"    },    \"prescription\": {    \"id\": 1    }}"
+						},
+						"url": {
+							"raw": "{{url}}/diseases",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"diseases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "diseases",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \"icd\": {    \"diseaseCode\": \"A00.1\"    }}"
+						},
+						"url": {
+							"raw": "{{url}}/diseases",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"diseases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "diseases/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/diseases/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"diseases",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "diseases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/diseases",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"diseases"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Drugs",
+			"item": [
+				{
+					"name": "drugs/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/drugs/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"drugs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "drugs",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\": 1,    \"medicine\": {        \"name\": \"Dexmedetomidin\"    },    \"prescription\": {    \"id\": 1    }}"
+						},
+						"url": {
+							"raw": "{{url}}/drugs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"drugs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "drugs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \"medicine\": {    \"name\": \"Dexmedetomidin\"    }}"
+						},
+						"url": {
+							"raw": "{{url}}/drugs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"drugs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "drugs/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/drugs/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"drugs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "drugs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/drugs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"drugs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "patients/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/patients/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patients",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Brendan D. Michael\",\"gender\": \"male\",\"birthday\": \"13/05/1999\",\"address\": {\"id\": 1}}"
+						},
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patients",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Brendan D. Michael\",\"gender\": \"male\",\"birthday\": \"29/11/1964\",\"address\": {\"id\": 1}}"
+						},
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patients/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/patients/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/patients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patients?id={id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/patients?id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patients?name={name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/patients?name=Brendan D. Michael",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Brendan D. Michael"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patients?birthday={birthday}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/patients?birthday=29/11/1964",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"patients"
+							],
+							"query": [
+								{
+									"key": "birthday",
+									"value": "29/11/1964"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prescriptions",
+			"item": [
+				{
+					"name": "prescriptions/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/prescriptions/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"prescriptions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prescriptions",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \"id\": 1,    \"quantity\": 1,    \"dose\": \"3 meals per day\",    \"howToUse\": \"nothing\"}"
+						},
+						"url": {
+							"raw": "{{url}}/prescriptions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"prescriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prescriptions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"quantity\": 2,\"dose\": \"2 meals per day\",\"howToUse\": \"cool on today\",\"drugs\": [{\"medicine\": {\"name\": \"Diazepam\"}},{\"medicine\": {\"name\": \"Etomidat\"}}],\"diseases\": [{\"icd\": {\"diseaseCode\": \"A00.1\"}},{\"icd\": {\"diseaseCode\": \"A01.3\"}}]}"
+						},
+						"url": {
+							"raw": "{{url}}/prescriptions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"prescriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prescriptions/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/prescriptions/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"prescriptions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prescriptions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/prescriptions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"prescriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prescriptions/{id}/drugs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/prescriptions/1/drugs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"prescriptions",
+								"1",
+								"drugs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "prescriptions/{id}/diseases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/prescriptions/1/diseases",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"prescriptions",
+								"1",
+								"diseases"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "reports/number-of-patient-visit-per-day",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/reports/number-of-patient-visit-per-day",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports",
+								"number-of-patient-visit-per-day"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reports/number-of-drug-used-per-day",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/reports/number-of-drug-used-per-day",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports",
+								"number-of-drug-used-per-day"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visits",
+			"item": [
+				{
+					"name": "visits/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/visits/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "visits",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\": 1,\"date\": \"23/07/2018\",\"time\": \"09:10:69\",\"problems\": \"headache\",\"prescription\": {\"id\": 1},\"patient\": {\"id\": 1}}"
+						},
+						"url": {
+							"raw": "{{url}}/visits",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "visits",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"date\": \"24/07/2018\",\"time\": \"09:10:69\",\"problems\": [\"headache\",\"stomache\"],\"prescription\": {\"id\": 1},\"patient\": {\"id\": 1}}"
+						},
+						"url": {
+							"raw": "{{url}}/visits",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "visits/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/visits/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "visits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/visits",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "visits?date={date}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/visits?date=24/07/2018",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "24/07/2018"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "visits?patientId={patientId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/visits?patientId=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits"
+							],
+							"query": [
+								{
+									"key": "patientId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
