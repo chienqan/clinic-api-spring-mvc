@@ -1,6 +1,7 @@
 package model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import model.Patient;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -15,7 +16,7 @@ public class LabTest {
     private int id;
 
     @Column
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private Date testDate;
 
     @ManyToOne

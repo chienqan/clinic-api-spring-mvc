@@ -6,12 +6,9 @@ import java.util.Properties;
 import javax.sql.DataSource;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -24,7 +21,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableTransactionManagement
 @EnableWebMvc
 @EnableJpaRepositories("repository")
-@ComponentScan({"controller", "service", "repository"})
+@ComponentScan({"controller", "service", "repository", "config"})
 public class AppConfig {
 
     @Bean
@@ -41,9 +38,14 @@ public class AppConfig {
     DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/clinic");
-        dataSource.setUsername("rmit");
-        dataSource.setPassword("1234");
+//        dataSource.setUrl("jdbc:postgresql://localhost:5432/clinic");
+//        dataSource.setUsername("rmit");
+//        dataSource.setPassword("1234");
+
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/sadi");
+        dataSource.setUsername("sadiadmin");
+        dataSource.setPassword("12345");
+
         return dataSource;
     }
 
@@ -51,7 +53,7 @@ public class AppConfig {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         properties.put("hibernate.show_sql", true);
-        properties.put("hibernate.hbm2ddl.auto", "update");
+        properties.put("hibernate.hbm2ddl.auto", "create-drop");
         return properties;
     }
 
